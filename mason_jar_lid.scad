@@ -8,12 +8,12 @@ pd = 19/2;  // piston separation radius
 
 difference() {
 	union() {
-		cylinder( r=60/2, h=1 );
-		cylinder( r=60/2-4.5, h=5 );
+		cylinder( r=68/2, h=1 );
+		cylinder( r=68/2-4, h=5 );
 		for ( i = [1,-1] ) {
 			for ( j = [1,-1] ) {
 				translate( [i*31/2,j*31/2,0] ) {
-						cylinder( r=3.5, h=sh );
+						//cylinder( r=3.5, h=sh );
 				}
 			}
 		}
@@ -32,5 +32,5 @@ difference() {
 	translate( [0, pd,-0.01] ) cylinder( r=pr, h=10 );
 	translate( [0,-pd,-0.01] ) cylinder( r=pr, h=10 );
 	// m6 threaded hole for HPLC fitting
-	translate( [60/3,0,-2] ) metric_thread(6, 1, 10);
+	translate( [52/2-5,0,-2.5] ) metric_thread(6, 1, 10);
 }
